@@ -42,9 +42,8 @@ namespace CybersecurityChatBot
         {
             try
             {
-                //SoundPlayer player = new SoundPlayer("greeting.wav");
                 SoundPlayer player = new SoundPlayer(AppDomain.CurrentDomain.BaseDirectory + "greeting.wav");
-                player.PlaySync(); // Plays the WAV and waits until it finishes
+                player.PlaySync();
             }
             catch (Exception ex)
             {
@@ -56,14 +55,12 @@ namespace CybersecurityChatBot
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(@"
-  _____                      _                         _       
- / ____|                    | |                       | |      
-| |     ___  _ __ ___  _ __ | ___  ___ ___  _ __   ___| |_ ___ 
-| |    / _ \| '_ ` _ \| '_ \|/ _ \/ __/ _ \| '_ \ / _ \ __/ _ \
-| |___| (_) | | | | | | |_) |  __/ (_| (_) | | | |  __/ ||  __/
- \_____\___/|_| |_| |_| .__/ \___|\___\___/|_| |_|\___|\__\___|
-                     | |                                       
-                     |_|                                       
+__        __   _                                   
+\ \      / /__| | ___ ___  _ __ ___   ___   
+ \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ 
+  \ V  V /  __/ | (_| (_) | | | | | |  __/ 
+   \_/\_/ \___|_|\___\___/|_| |_| |_|\___|  
+                                                    
 ");
             Console.ResetColor();
         }
@@ -71,9 +68,9 @@ namespace CybersecurityChatBot
         static void DisplayMenu()
         {
             Console.WriteLine("\nYou can ask me things like:");
-            Console.WriteLine("- How are you?");
-            Console.WriteLine("- What's your purpose?");
-            Console.WriteLine("- What can I ask you about?");
+            Console.WriteLine("- DDOS Attack?");
+            Console.WriteLine("- Firewall?");
+            Console.WriteLine("- Ransomware?");
             Console.WriteLine("- Password safety?");
             Console.WriteLine("- Phishing?");
             Console.WriteLine("- Safe browsing?");
@@ -83,14 +80,14 @@ namespace CybersecurityChatBot
         {
             switch (question)
             {
-                case "how are you?":
-                    TypeText("I'm functioning well, thanks for asking!", 35);
+                case "ddos attack?":
+                    TypeText("A DDoS attack floods a website or service with too much traffic, causing it to crash or slow down.", 35);
                     break;
-                case "what's your purpose?":
-                    TypeText("I'm here to help you stay safe online.", 35);
+                case "firewall?":
+                    TypeText("A firewall is a security system that monitors and controls incoming and outgoing network traffic.", 35);
                     break;
-                case "what can i ask you about?":
-                    TypeText("You can ask about password safety, phishing, and safe browsing.", 35);
+                case "ransomware?":
+                    TypeText("Ransomware is malicious software that locks your files until you pay a ransom. Always back up your data!", 35);
                     break;
                 case "password safety?":
                     TypeText("Use strong, unique passwords and a trusted password manager.", 35);
@@ -115,8 +112,7 @@ namespace CybersecurityChatBot
                 Thread.Sleep(delay);
             }
             Console.WriteLine();
-            //test commit 2.1
-            //testing workflow 2.2
         }
     }
 }
+
