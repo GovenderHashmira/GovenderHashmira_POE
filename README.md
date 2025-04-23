@@ -1,4 +1,6 @@
-reference list:
+The Cybersecurity Awareness Chatbot is a C# console program that teaches users about critical cybersecurity subjects in a fun and interactive way. When started, it welcomes users with a voice clip and a colorful ASCII "WELCOME" greeting before asking for their name. Users can then pose queries about cybersecurity issues such as DDoS attacks, firewalls, ransomware, password security, phishing, and secure browsing. The chatbot responds with concise, useful responses using a fluid typewriter-style text animation.
+
+Reference List:
 
 Troelsen, A. and Japikse, P. 2021. Pro C# 9 with .NET 5: Foundational Principles and Practices in Programming. 10th ed. Apress.
 
